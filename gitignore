@@ -1,0 +1,5 @@
+/shared/build/
+/server/build/
+/lwjgl3/build/
+/core/build/
+/.gradle/

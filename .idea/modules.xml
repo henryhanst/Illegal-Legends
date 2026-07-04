@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Illegal-Legends.iml" filepath="$PROJECT_DIR$/.idea/modules/Illegal-Legends.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/Illegal-Legends.core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.iml" filepath="$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lwjgl3/Illegal-Legends.lwjgl3.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/Illegal-Legends.server.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.main.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.test.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/Illegal-Legends.shared.test.iml" />
+    </modules>
+  </component>
+</project>

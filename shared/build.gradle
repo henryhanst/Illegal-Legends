@@ -1,0 +1,9 @@
+eclipse.project.name = appName + '-shared'
+
+dependencies {
+  implementation group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+
+  // you must enable annotation processing in intellij settings.
+  compileOnly 'org.projectlombok:lombok:1.18.36'
+  annotationProcessor 'org.projectlombok:lombok:1.18.36'
+}

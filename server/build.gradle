@@ -1,0 +1,99 @@
+plugins {
+  id 'application'
+}
+
+version = '1.2'
+
+application {
+  mainClass = 'ee.taltech.examplegame.server.ServerLauncher'
+}
+
+java.sourceCompatibility = 21
+java.targetCompatibility = 21
+if (JavaVersion.current().isJava9Compatible()) {
+  compileJava.options.release.set(21)
+}
+
+eclipse.project.name = appName + '-server'
+
+
+dependencies {
+  // https://mvnrepository.com/artifact/com.badlogicgames.gdx/gdx-backend-headless
+  implementation group: 'com.badlogicgames.gdx', name: 'gdx-backend-headless', version: '1.13.1'
+  implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:1.11.0"
+  implementation "com.badlogicgames.gdx:gdx-platform:1.11.0:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-box2d:1.11.0"
+  implementation project(':shared')
+  implementation group: 'com.esotericsoftware', name: 'kryonet', version: '2.22.0-RC1'
+  implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
+
+  // you must enable annotation processing in intellij settings.
+  compileOnly 'org.projectlombok:lombok:1.18.36'
+  annotationProcessor 'org.projectlombok:lombok:1.18.36'
+}
+
+distributions {
+  main {
+    contents {
+      from(tasks.jar) {
+        into 'libs'
+      }
+      from("${rootProject.projectDir}/shared/build/libs") {
+        into 'libs'
+      }
+    }
+  }
+}
+
+tasks.named("distZip").configure {
+  dependsOn(":shared:build")
+}
+tasks.named("distTar").configure {
+  dependsOn(":shared:build")
+}
+
+jar {
+  archiveBaseName.set(appName)
+// the duplicatesStrategy matters starting in Gradle 7.0; this setting works.
+  duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+  dependsOn configurations.runtimeClasspath
+  from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+// these "exclude" lines remove some unnecessary duplicate files in the output JAR.
+  exclude('META-INF/INDEX.LIST', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA')
+  dependencies {
+    exclude('META-INF/INDEX.LIST', 'META-INF/maven/**')
+  }
+// setting the manifest makes the JAR runnable.
+  manifest {
+    attributes 'Main-Class': application.mainClass.get()
+  }
+// this last step may help on some OSes that need extra instruction to make runnable JARs.
+  doLast {
+    file(archiveFile).setExecutable(true, false)
+  }
+}
+
+
+// ensure `gradle run` / IDEA "Run" uses the project root as working dir
+run {
+  workingDir = rootProject.projectDir
+}
+
+// Equivalent to the jar task; here for compatibility with gdx-setup.
+task dist(dependsOn: [jar]) {
+}
+
+jar {
+  manifest {
+    attributes(
+            'Main-Class': 'ee.taltech.examplegame.server.ServerLauncher'
+    )
+  }
+
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
