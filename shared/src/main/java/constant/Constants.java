@@ -9,8 +9,9 @@ public class Constants {
     // --- networking constants ---
     public static final int PORT_TCP = 8086;
     public static final int PORT_UDP = 8087;
-    //   this should be changed depending on where the server is hosted
-//    public static final String SERVER_IP = "193.40.157.28";
+
+    // The original university-hosted server address has been replaced
+    // with localhost for the public GitHub version.
     public static final String SERVER_IP = "localhost";
 
     // --- player constants ---

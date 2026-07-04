@@ -106,11 +106,7 @@ Repositooriumi root directorys järgmised käsud:
 | Kaasahaarav UX        | Ilus GUI, abilititel on heli efektid ja mängul on taustamuusika                                                               |
 | Keeruline pathfinding | Pathfinding kasutades A*, BFS ja Bresenhami algoritmi                                                                         |
 
-### Ühendamine Taltech serveriga:
-Me hoiame serveri IP-aadressi main harus koodis, seega peaks mäng käivitamisel automaatselt serveriga ühenduse looma. kui mäng käivitada
-- **Serveri ip:** 193.40.157.28
-- **TCP Port:** 8086
-- **UDP Port:** 8087
+
 
 ### Autorid:
 - Osmo Lapin
