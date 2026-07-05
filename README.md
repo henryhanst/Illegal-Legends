@@ -12,9 +12,24 @@ Mängus on erinevad karakterid, kellel on erioskused ehk võimed.
 
 Eesmärk on hävitada vastase baas.
 
+## Pildid
+
+### Gameplay
+![Gameplay](screenshots/Gameplay.png)
+
+### Multiplayer Lobby
+![Multiplayer Lobby](screenshots/lobby.png)
+
+### Karakteri valimine
+
+![Champion Selection](screenshots/championSelect.png)
+
+### Settings
+![Settings](screenshots/settings.png)
 
 
----
+### Victory Screen
+![Victory Screen](screenshots/endscreen.png)
 
 ## Nupud mängimiseks
 
